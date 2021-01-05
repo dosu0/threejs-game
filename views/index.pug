@@ -1,11 +1,36 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title ThreeJS Game
-        link(rel="stylesheet", href="/css/styles.css")
+extends templates/webpage.pug
 
-    body
-        canvas#canvas
-        script(type="module" src="/js/game.js")
+mixin comma
+    | ,
+    |
+
+block styles
+    style.
+        #background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            border: none;
+            pointer-events: none;
+        }
+
+block content
+    iframe#background(src=`/example/${Math.round(Math.random() * examples.length)}`)
+    main.container
+        .starter-template(class="text-center py-5 px-3")
+            h1 Made with
+            p.lead
+                +link('Express', 'https://expressjs.com') 
+                +comma() 
+                +link('Pug', 'https://pugjs.org')
+                +comma()
+                +link('Bootstrap', 'https://getbootstrap.com')
+                +comma()
+                | and
+                |
+                +link('ThreeJS', 'https://threejs.org')
+                | .
+    
