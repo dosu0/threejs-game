@@ -2,7 +2,7 @@
 
 # Running
 ```git
-git clone REPO
+git clone https://github.com/Platinum-Phoenix/threejs-game
 cd game
 npm install
 npm start

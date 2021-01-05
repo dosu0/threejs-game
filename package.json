@@ -4,7 +4,7 @@
   "description": "A game made with threejs, express, and typescript.",
   "main": "server/app.ts",
   "scripts": {
-    "start": "npx ts-node",
+    "start": "npx ts-node server/app.ts",
     "test": "npx nodemon",
     "lint": "npx eslint . --ext .ts",
     "format": "npx prettier --config .prettierrc 'server/*.ts game/src/*.ts' --write"
